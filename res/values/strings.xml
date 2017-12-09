@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FragmentTabHostDemo</string>
+    <string name="home">主页</string>
+    <string name="chat">联系人</string>
+    <string name="photo">拍照</string>
+    <string name="schedule">日程</string>
+    <string name="set">设置</string>
+</resources>
