@@ -4,10 +4,12 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.zl.fragmenttabhostdemo.R;
 
@@ -43,7 +45,15 @@ public class HomeFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        Log.i(TAG,"onActivityCreated");
+        Toolbar toolbar = rootView.findViewById(R.id.toolBar);
+        toolbar.setTitle(R.string.toolbar_title);
+        toolbar.setNavigationIcon(R.drawable.search);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(),"首页",Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
