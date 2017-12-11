@@ -45,15 +45,6 @@ public class HomeFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        Toolbar toolbar = rootView.findViewById(R.id.toolBar);
-        toolbar.setTitle(R.string.toolbar_title);
-        toolbar.setNavigationIcon(R.drawable.search);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getActivity(),"首页",Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 
     @Override
